@@ -2,11 +2,9 @@ YouTube Clone
 
 A YouTube-style video app built with React, Redux, and Tailwind CSS.
 
-Live demo: [add your Vercel/Netlify link here]
 
-Show Image
 
-<!-- Take a screenshot of the running app, save it as screenshot.png in the project root -->
+
 Features
 Home feed with a grid of video cards
 Category buttons to filter the feed
@@ -14,7 +12,6 @@ Watch page for playing a selected video
 Collapsible sidebar and navbar
 Live chat panel on the watch page, with state managed in Redux
 Responsive layout styled with Tailwind CSS
-<!-- Edit this list so it matches exactly what your app does. Remove anything it doesn't do. -->
 Tech Stack
 Area	Tools
 UI	React (Create React App)
@@ -23,20 +20,34 @@ Routing	React Router
 Styling	Tailwind CSS
 Getting Started
 
-You need Node.js installed.
+### Prerequisites
+- Node.js installed
+- YouTube Data API v3 key ([Get one here](https://console.cloud.google.com/apis/credentials))
 
-bash
+### Installation
+
+```bash
 # 1. Clone the repository
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone https://github.com/Heavybreather420/ytclone.git
+cd ytclone
 
 # 2. Install dependencies
 npm install
 
-# 3. Start the app
+# 3. Set up environment variables
+# Copy the example file
+cp .env.example .env
+
+# Edit .env and add your YouTube API key:
+# REACT_APP_YOUTUBE_API_KEY=your_api_key_here
+
+# 4. Start the app
 npm start
+```
 
 The app opens at http://localhost:3000.
+
+> **Note:** You must provide your own YouTube API key in the `.env` file for the app to work.
 
 Project Structure
 src/
@@ -49,6 +60,3 @@ What I Learned
 Structuring a React app into small, reusable components
 Managing shared state with Redux slices
 Building responsive layouts with Tailwind CSS
-<!-- add one or two things that were hard or interesting -->
-Future Improvements
-<!-- e.g. search with suggestions, infinite scroll, dark mode -->
